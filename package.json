@@ -1,7 +1,11 @@
 {
   "name": "renarsvilnis-js-helpers",
   "version": "1.0.0",
-  "description": "",
+  "description": "Collection of personal JavaScript helper function & React components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renarsvilnis/renarsvilnis-js-helpers.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

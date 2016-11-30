@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import range from './range';
 
 describe('range', () => {

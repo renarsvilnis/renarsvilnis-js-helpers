@@ -1,9 +1,3 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = calcFitDimensions;
 /**
  * Calculate fit dimensions
  * @method calcFitDimensions
@@ -15,12 +9,12 @@ exports.default = calcFitDimensions;
  * @param  {Boolean} [options.upscale=false]
  * @return {Object}
  */
-function calcFitDimensions(width, height, containerWidth, containerHeight, options) {
-  options = Object.assign({ upscale: true }, options);
+export default function calcFitDimensions (width, height, containerWidth, containerHeight, options) {
+  options = Object.assign({upscale: true}, options);
 
-  var imgRatio = width / height;
-  var newWidth = void 0;
-  var newHeight = void 0;
+  const imgRatio = width / height;
+  let newWidth;
+  let newHeight;
 
   // if image is horizontal
   if (imgRatio > 1) {

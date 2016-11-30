@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import clamp from './clamp';
 
 describe('clamp', () => {

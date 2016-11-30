@@ -1,0 +1,7 @@
+{
+  "extends": ["renarsvilnis"],
+  "settings": {
+    "import/resolver": {
+    }
+  }
+}

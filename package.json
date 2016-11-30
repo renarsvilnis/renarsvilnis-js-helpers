@@ -4,11 +4,19 @@
   "description": "Collection of personal JavaScript helper function & React components",
   "repository": {
     "type": "git",
-    "url": "https://github.com/renarsvilnis/renarsvilnis-js-helpers.git"
+    "url": "git+https://github.com/renarsvilnis/renarsvilnis-js-helpers"
   },
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:prod": "NODE_ENV='production' babel src --out-dir lib --ignore spec.js,test.js",
+    "build:clean": "rm -rf ./lib",
+    "prod": "npm run validate && npm run build:clean && npm run build:prod",
+    "validate": "npm run lint && npm run test",
+    "lint": "./node_modules/.bin/eslint ./src",
+    "test": "NODE_ENV=test ./node_modules/.bin/jest ./src/**/*",
+    "test:watch": "NODE_ENV=test ./node_modules/.bin/jest -o --watch",
+    "prepublish": "npm run prod",
+    "precommit": "npm run validate",
+    "prepush": "npm run validate"
   },
   "keywords": [],
   "author": "Renārs Vilnis <renars.vilnis@gmail.com> (https://renarsvilnis.com/)",
@@ -16,9 +24,27 @@
   "files": [
     "./lib"
   ],
+  "peerDependencies": {},
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-jest": "17.0.2",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-react-optimize": "1.0.1",
+    "babel-preset-stage-0": "6.16.0",
+    "eslint": "3.11.1",
+    "eslint-config-renarsvilnis": "2.2.0",
+    "husky": "0.11.9",
+    "jest": "17.0.2"
+  },
+  "dependencies": {
+    "react": "15.x",
+    "react-addons-css-transition-group": "15.x",
+    "react-dom": "15.x"
+  },
   "jest": {
     "modulePaths": [
-      "lib"
+      "src"
     ]
   }
 }

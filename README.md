@@ -1,8 +1,16 @@
 
 ## Collection of personal JavaScript helper function & React components
 
+```javascript
+npm i -S renarsvilnis-js-helpers
+// or
+yarn add renarsvilnis-js-helpers
+```
+
+### Usage
 
 ```javascript
+// All files are imported by the patter below
 import <functionName> from 'renarsvilnis-js-helpers/lib/<helperCategory>/<functionName>';
 
 // examples
@@ -10,31 +18,31 @@ import normaliseFontRendering from 'renarsvilnis-js-helpers/lib/browser/normalis
 import calcFitDimensions from 'renarsvilnis-js-helpers/lib/dom/calcFitDimensions';
 ```
 
-### browser
-- `normaliseFontRendering()` - Normalizes light/ultra-light font rendering in Safari and Windows
+### API
+- browser
+  - `normaliseFontRendering()` - Normalizes light/ultra-light font rendering in Safari and Windows
 
-### dom
-- `calcFillDimensions(width, height, containerWidth, containerHeight, options = {upscale: true})`
-- `calcFitDimensions(width, height, containerWidth, containerHeight, options = {upscale: true})`
-- `getImageDimensions(url)`
+- dom
+  - `calcFillDimensions(width, height, containerWidth, containerHeight, options = {upscale: true})`
+  - `calcFitDimensions(width, height, containerWidth, containerHeight, options = {upscale: true})`
+  - `getImageDimensions(url)`
 
-### math
-- `clamp(val, min, max)`
-- `easings`
-- `lerp(currentValue, targetValue, amount)`
-- `range(val, inMin, inMax, outMin, outMax)`
+- math
+  - `clamp(val, min, max)`
+  - `easings`
+  - `lerp(currentValue, targetValue, amount)`
+  - `range(val, inMin, inMax, outMin, outMax)`
 
-### react
-- `DelayMount`
-- `FirstChildReactCSSTransitionGroup`
-- `ObjectFill`
-- `ObjectFit`
+- react
+  - `<DelayMount>`
+  - `<FirstChildReactCSSTransitionGroup>`
+  - `<ObjectFill>`
+  - `<ObjectFit>`
 
-### webpack
+- webpack
+  - `getCurrentScriptPath()`
 
-- `getCurrentScriptPath()`
-
-#### Configuring Webpack so assets work for ANY base url
+### Configuring Webpack so assets work for ANY base url
 
 This collection includes helper functions for configuring Webpack, so that the bundled assets work under any domain/subdomain.
 

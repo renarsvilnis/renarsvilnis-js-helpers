@@ -1,16 +1,30 @@
 
 ## Collection of personal JavaScript helper function & React components
 
+### browser
+- `normaliseFontRendering()` - Normalizes light/ultra-light font rendering in Safari and Windows
 
+### dom
+- `calcFillDimensions(width, height, containerWidth, containerHeight, options = {upscale: true})`
+- `calcFitDimensions(width, height, containerWidth, containerHeight, options = {upscale: true})`
+- `getImageDimensions(url)`
+
+### math
+- `clamp(val, min, max)`
+- `easings`
+- `lerp(currentValue, targetValue, amount)`
+- `range(val, inMin, inMax, outMin, outMax)`
 
 ### React Components
-
 - `DelayMount`
 - `FirstChildReactCSSTransitionGroup`
 - `ObjectFill`
 - `ObjectFit`
 
-### Webpack
+### webpack
+
+- `getCurrentScriptPath()`
+
 This collection includes helper functions for configuring Webpack, so that the bundled assets work under any domain/subdomain.
 
 `webpack.config.js`

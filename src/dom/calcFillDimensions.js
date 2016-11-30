@@ -6,7 +6,7 @@
  * @param  {Number}  containerWidth
  * @param  {Number}  containerHeight
  * @param  {Object}  options
- * @param  {Boolean} [options.upscale=false]
+ * @param  {Boolean} [options.upscale=true]
  * @return {Object}
  */
 export default function calcFillDimensions (width, height, containerWidth, containerHeight, options) {

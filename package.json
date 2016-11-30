@@ -22,7 +22,7 @@
   "author": "Renārs Vilnis <renars.vilnis@gmail.com> (https://renarsvilnis.com/)",
   "license": "MIT",
   "files": [
-    "./lib"
+    "lib"
   ],
   "peerDependencies": {},
   "devDependencies": {

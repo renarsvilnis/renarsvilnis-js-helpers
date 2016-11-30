@@ -1,7 +1,7 @@
 import {PropTypes, PureComponent, cloneElement} from 'react';
 import {findDOMNode} from 'react-dom';
 
-import calcFitDimensions from 'display/calcFitDimensions';
+import calcFitDimensions from '../../display/calcFitDimensions';
 
 export default class ObjectFit extends PureComponent {
   static propTypes = {

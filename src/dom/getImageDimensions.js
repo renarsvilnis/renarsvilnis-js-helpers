@@ -1,7 +1,7 @@
 /* global Image */
 
 /**
- * Get image a dimenions
+ * Load image and get image dimensions
  * @param  {Image} url
  * @return {Promise<Object>}
  */

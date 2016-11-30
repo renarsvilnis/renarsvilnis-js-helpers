@@ -1,7 +1,7 @@
 import {PropTypes, PureComponent, cloneElement} from 'react';
 import {findDOMNode} from 'react-dom';
 
-import calcFillDimensions from 'display/calcFillDimensions';
+import calcFillDimensions from '../../display/calcFillDimensions';
 
 export default class ObjectFill extends PureComponent {
   static propTypes = {

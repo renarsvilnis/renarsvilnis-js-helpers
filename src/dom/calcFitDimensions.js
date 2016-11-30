@@ -5,7 +5,7 @@
  * @param  {Number}  height
  * @param  {Number}  containerWidth
  * @param  {Number}  containerHeight
- * @param  {Object}
+ * @param  {Object}  options
  * @param  {Boolean} [options.upscale=false]
  * @return {Object}
  */

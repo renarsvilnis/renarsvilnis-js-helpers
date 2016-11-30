@@ -1,6 +1,15 @@
 
 ## Collection of personal JavaScript helper function & React components
 
+
+```javascript
+import <functionName> from 'renarsvilnis-js-helpers/lib/<helperCategory>/<functionName>';
+
+// examples
+import normaliseFontRendering from 'renarsvilnis-js-helpers/lib/browser/normaliseFontRendering';
+import calcFitDimensions from 'renarsvilnis-js-helpers/lib/dom/calcFitDimensions';
+```
+
 ### browser
 - `normaliseFontRendering()` - Normalizes light/ultra-light font rendering in Safari and Windows
 
@@ -25,9 +34,16 @@
 
 - `getCurrentScriptPath()`
 
+#### Configuring Webpack so assets work for ANY base url
+
 This collection includes helper functions for configuring Webpack, so that the bundled assets work under any domain/subdomain.
 
-`webpack.config.js`
+In order to achieve this you need to do 3 things:
+
+1. Specify `output.pathinfo = false` in `webpack.config.js`
+2. *DEVELOPMENT ONLY* Tell webpack hot middleware `webpack-hot-middleware/client?dynamicPublicPath=true`
+3. Set `__webpack_public_path__` variable **at the start** of the Webpack entry file.
+
 
 ```javascript
 {
@@ -47,9 +63,9 @@ This collection includes helper functions for configuring Webpack, so that the b
 
 ```javaScript
 /**
- * As Webpack manages all assets, including iamges, videos, etc it needs to know
- * the url of the root, this can be set during build process in webpack-config
- * under "output.publicPath", but here to make webpack more "portable" we fetch
+ * As Webpack manages all assets, including images, videos, etc. It needs to know
+ * the base url. This can be set during build process in webpack-config
+ * under "output.publicPath", but here to make webpack assets portable we fetch
  * the url from the entry file through getCurrentScriptPath.
  *
  * @reference https://medium.com/@aviv.rosental/portable-bundle-with-webpack-d2eed216cd4c#.8d0ei927i

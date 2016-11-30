@@ -15,7 +15,7 @@
 - `lerp(currentValue, targetValue, amount)`
 - `range(val, inMin, inMax, outMin, outMax)`
 
-### React Components
+### react
 - `DelayMount`
 - `FirstChildReactCSSTransitionGroup`
 - `ObjectFill`
